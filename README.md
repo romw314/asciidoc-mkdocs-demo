@@ -18,7 +18,25 @@ Basic set up:
 
 ## TODO
 
-* Generate page navigation from master.adoc
+* Generate page navigation from master.adoc into mkdocs.yml
+
+for example: 
+
+```
+# Page tree
+nav:
+  - Home: index.md
+  - Getting started:
+    - Installation: getting-started.md
+    - Creating your site: creating-your-site.md
+    - Publishing your site: publishing-your-site.md
+    - Customization: customization.md
+    - Troubleshooting: troubleshooting.md
+    - Data privacy: data-privacy.md
+    - Insiders: insiders.md
+    - License: license.md
+```
+
 * Set up the github action to run asciidoctor command
 * Set up the github action to serve via mkdocs to github pages
 
