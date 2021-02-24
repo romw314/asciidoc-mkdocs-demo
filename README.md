@@ -17,5 +17,7 @@ Basic set up:
 ## TODO
 
 * Generate page navigation from master.adoc
+* Set up the github action to run asciidoctor command
+* Set up the github action to serve via mkdocs to github pages
 
 
