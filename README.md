@@ -39,5 +39,6 @@ nav:
 
 * Set up the github action to run asciidoctor command
 * Set up the github action to serve via mkdocs to github pages
+* Ensure in doc xref linking works
 
 
