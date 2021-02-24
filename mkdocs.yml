@@ -1,0 +1,16 @@
+site_name: Asciidoc MKDocs Demo
+theme:
+  name: material
+  palette:
+    primary: red
+    accent: blue
+  icon:
+    repo: fontawesome/brands/git-alt
+  features:
+    - navigation.instant
+    - navigation.sections
+    - navigation.expand
+repo_url: https://github.com/aireilly/asciidoc-mkdocs-demo
+repo_name: aireilly/asciidoc-mkdocs-demo
+plugins:
+  - git-revision-date-localized

@@ -2252,10 +2252,6 @@ all developers.
 .Normal and reusable footnotes
 ----
 A statement.footnote:[Clarification about this statement.]
-
-A bold statement.footnoteref:[disclaimer,These opinions are my own.]
-
-Another bold statement.footenoteref:[disclaimer]
 ----
 
 [.result]
@@ -2265,9 +2261,6 @@ Another bold statement.footenoteref:[disclaimer]
 a|
 A statement.footnote:[Clarification about this statement.]
 
-A bold statement.footnoteref:[disclaimer,These opinions are my own.]
-
-Another bold statement.footenoteref:[disclaimer]
 |===
 ====
 
