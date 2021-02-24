@@ -14,6 +14,8 @@ Basic set up:
 
     asciidoctor -b docbook -a leveloffset=+1 -o - master.adoc | pandoc  --atx-headers --wrap=preserve -t markdown_strict -f docbook - > docs/index.md
 
+    mkdocs serve
+
 ## TODO
 
 * Generate page navigation from master.adoc
