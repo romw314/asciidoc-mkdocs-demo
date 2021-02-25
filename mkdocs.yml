@@ -7,10 +7,16 @@ theme:
   icon:
     repo: fontawesome/brands/git-alt
   features:
-    - navigation.instant
     - navigation.sections
+    - navigation.instant
     - navigation.expand
+    - toc.integrate
 repo_url: https://github.com/aireilly/asciidoc-mkdocs-demo
 repo_name: aireilly/asciidoc-mkdocs-demo
 plugins:
   - git-revision-date-localized
+  - search
+markdown_extensions:
+  - toc:
+      permalink: true
+      toc_depth: 3

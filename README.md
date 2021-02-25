@@ -12,6 +12,8 @@ Basic set up:
 
     mkdir docs
 
+    cp -r images docs/images
+
     asciidoctor -b docbook -a leveloffset=+1 -o - master.adoc | pandoc  --atx-headers --wrap=preserve -t markdown_strict -f docbook - > docs/index.md
 
     mkdocs serve
