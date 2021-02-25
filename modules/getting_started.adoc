@@ -2,4 +2,6 @@
 
 This document is sample asciidoc content used to test a github pages based asciidoc static site generated with pandoc and MKDocs.
 
+The build is done with Github actions.
+
 image::image.png[Image]
