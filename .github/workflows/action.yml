@@ -11,6 +11,16 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
+    - name: Setup Python
+      uses: actions/setup-python@v5.0.0
+      with:
+        python-version: 3.12
+    - name: Install MkDocs
+      run: pip install mkdocs
+    - name: Install plugins
+      run: pip install mkdocs-material mkdocs-git-revision-date-localized-plugin
+    - name: Copy images
+      run: cp -r images docs/images
     - name: Get build container
       id: adocbuild
       uses: avattathil/asciidoctor-action@master
@@ -18,3 +28,13 @@ jobs:
           program: "asciidoctor -b docbook -a leveloffset=+1 -o - master.adoc"
     - name: Print execution time
       run: echo "Time ${{ steps.adocbuild.outputs.time }}"
+    - name: Build site
+      run: mkdocs build
+    - name: Configure Pages
+      uses: actions/configure-pages@v4.0.0
+    - name: Upload Pages artifact
+      uses: actions/upload-pages-artifact@v3.0.0
+      with:
+        path: ./site
+    - name: Deploy to Pages
+      uses: actions/deploy-pages@v4.0.3
