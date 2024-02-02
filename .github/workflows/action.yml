@@ -4,10 +4,12 @@ on:
   push:
     branches:
     - main
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 jobs:
   adoc_build:
     runs-on: ubuntu-18.04
-    name: asciidoctor -b docbook -a leveloffset=+1 -o - master.adoc 
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
