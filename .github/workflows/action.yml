@@ -21,8 +21,6 @@ jobs:
       run: pip install mkdocs
     - name: Install plugins
       run: pip install mkdocs-material mkdocs-git-revision-date-localized-plugin
-    - name: Copy images
-      run: cp -r images docs/images
     - name: Get build container
       id: adocbuild
       uses: avattathil/asciidoctor-action@master
@@ -30,6 +28,8 @@ jobs:
           program: "asciidoctor -b docbook -a leveloffset=+1 -o - master.adoc"
     - name: Print execution time
       run: echo "Time ${{ steps.adocbuild.outputs.time }}"
+    - name: Copy images
+      run: cp -r images docs/images
     - name: Build site
       run: mkdocs build
     - name: Configure Pages
