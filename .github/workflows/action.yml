@@ -26,6 +26,10 @@ jobs:
       uses: avattathil/asciidoctor-action@master
       with:
           program: "asciidoctor -b docbook -a leveloffset=+1 -o docbook.xml master.adoc"
+    - name: Create docs dir
+      uses: docker://alpine:3.19
+      with:
+        args: "mkdir -vp docs"
     - name: Convert to Markdown
       uses: docker://pandoc/core:2.9
       with:
