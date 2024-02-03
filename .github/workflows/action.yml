@@ -25,7 +25,11 @@ jobs:
       id: adocbuild
       uses: avattathil/asciidoctor-action@master
       with:
-          program: "asciidoctor -b docbook -a leveloffset=+1 -o - master.adoc"
+          program: "asciidoctor -b docbook -a leveloffset=+1 -o docbook.xml master.adoc"
+    - name: Convert to Markdown
+      uses: docker://pandoc/core:2.9
+      with:
+        args: "--atx-headers --wrap=preserve -t markdown_strict -f docbook docbook.xml -o docs/index.md"
     - name: Print execution time
       run: echo "Time ${{ steps.adocbuild.outputs.time }}"
     - name: Copy images
