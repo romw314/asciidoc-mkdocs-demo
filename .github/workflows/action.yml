@@ -37,7 +37,9 @@ jobs:
     - name: Print execution time
       run: echo "Time ${{ steps.adocbuild.outputs.time }}"
     - name: Copy images
-      run: cp -r images docs/images
+      uses: docker://busybox:1.36-musl
+      with:
+        args: "cp -r images docs/images"
     - name: Build site
       run: mkdocs build
     - name: Configure Pages
