@@ -13,14 +13,6 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
-    - name: Setup Python
-      uses: actions/setup-python@v5.0.0
-      with:
-        python-version: 3.12
-    - name: Install MkDocs
-      run: pip install mkdocs
-    - name: Install plugins
-      run: pip install mkdocs-material mkdocs-git-revision-date-localized-plugin
     - name: Get build container
       id: adocbuild
       uses: avattathil/asciidoctor-action@153b34f78be19907024c3dfb128874a36cec2535
