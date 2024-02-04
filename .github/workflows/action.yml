@@ -42,7 +42,7 @@ jobs:
       uses: actions/download-artifact@v3.0.2
       with:
         name: docbook.xml
-        path: ./docbook.xml
+        path: .
     - name: Convert to Markdown
       uses: docker://pandoc/core:2.9
       with:
@@ -65,7 +65,7 @@ jobs:
       uses: actions/download-artifact@v3.0.2
       with:
         name: index.md
-        path: ./docs/index.md
+        path: ./docs
     - name: Build site
       uses: romw314/mkdocs-action@v2
     - name: Upload artifact
