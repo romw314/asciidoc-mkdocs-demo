@@ -57,6 +57,8 @@ jobs:
     needs:
     - convert_md
     steps:
+    - name: Checkout
+      uses: actions/checkout@v3
     - name: Create docs dir
       run: mkdir docs
     - name: Copy images
