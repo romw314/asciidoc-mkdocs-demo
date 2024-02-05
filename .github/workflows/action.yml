@@ -61,7 +61,7 @@ jobs:
         name: index.md
         path: ./docs
     - name: Build site
-      uses: romw314/mkdocs-action@v5
+      uses: romw314/mkdocs-action@v6
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v3.0.0
   deploy:
