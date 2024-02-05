@@ -51,6 +51,8 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
     - name: Create docs dir
       run: mkdir docs
     - name: Copy images
